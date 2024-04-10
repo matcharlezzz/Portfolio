@@ -1,0 +1,272 @@
+@font-face {
+    font-family: HeaderMain;
+    src: url(assets/fonts/HeaderTitle.otf);
+}
+
+@font-face {
+    font-family: HeaderMain1;
+    src: url(assets/fonts/HeaderTitle1.otf);
+}
+
+@font-face {
+    font-family: GenFont;
+    src: url(assets/fonts/GenFont.ttf);
+}
+
+@font-face {
+    font-family: DigiFont;
+    src: url(assets/fonts/DigiFont.TTF);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #192024;
+}
+
+section {
+    width: 80%;
+    height: 100vh;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+#title_card {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5%;
+    height: 80%;
+    display: flex;
+    gap: 15px;
+}
+
+#logo {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: aqua;
+}
+
+#name_card {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: fit-content;
+    cursor: pointer;
+}
+
+#name_card h1 {
+    font-family: HeaderMain1;
+    font-size: 30pt;
+    font-weight: 100;
+    color: #E6E6E6;
+}
+
+#nav {
+    margin-right: 5%;
+    width: 40%;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: right;
+    gap: 10%;
+}
+
+.nav_text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: fit-content;
+    margin-top: 5px;
+    color: #E6E6E6;
+    font-family: GenFont;
+    font-size: 12pt;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ud {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.nav_text:hover .ud {
+    visibility: visible;
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    width: 5px;
+    height: 5px;
+}
+
+#image_profile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/profile_pic_home_crop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    z-index: -1;
+}
+
+#home {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 105vh;
+}
+
+#rain_cont {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.digit_txt {
+    height: 100%;
+    position: absolute;
+    font-family: DigiFont;
+    font-size: 42pt;
+    color: #AAC7D8;
+    text-shadow: 0px 0px 10px #aac7d8;
+    filter: blur(5px);
+    animation: rain linear 5s;
+}
+
+#name_home {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+#name_home h1 {
+    margin: 0;
+    white-space: nowrap;
+    font-family: GenFont;
+    font-size: 75pt;
+    color: #E6E6E6;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.150);
+    cursor: default;
+}
+
+#desc_home {
+    overflow: hidden;
+    height: 22pt;
+}
+
+#desc_home h2{
+    margin: 0;
+    white-space: nowrap;
+    float: right;
+    font-family: GenFont;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #93c4de;
+    text-shadow: 0px 0px 5px #aac7d8a7;
+    cursor: default;
+}
+
+.desc_def {
+    display: none;
+}
+
+.desc_in {
+    display: block;
+    animation: desc_in linear 0.25s;
+}
+
+.desc_out {
+    display: block;
+    animation: desc_out linear 0.25s;
+}
+
+#home_footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+}
+
+#about {
+    position: relative;
+    width: 100vw;
+    background-color: #DFEBF6;
+}
+
+.hidden {
+    height: 95vh;
+    transition: all ease-in-out 0.15s;
+}
+
+.active {
+    height: 100vh;
+    margin-top: -5vh;
+}
+
+@keyframes desc_in {
+    from {
+        transform: translateY(100%);
+        filter: blur(2px);
+        opacity: 30%;
+        text-shadow: none;
+    }
+    to {
+        transform: translateY(0%);
+        filter: blur(0px);
+        opacity: 100%;
+        text-shadow: none;
+    }
+}
+
+@keyframes desc_out {
+    from {
+        transform: translateY(0%);
+        filter: blur(0px);
+        opacity: 100%;
+        text-shadow: none;
+    }
+    to {
+        transform: translateY(-100%);
+        filter: blur(2px);
+        opacity: 30%;
+        text-shadow: none;
+    }
+}
+
+@keyframes rain {
+    from {
+        transform: translateY(-30%);
+        opacity: 100%;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0%;
+    }
+}
