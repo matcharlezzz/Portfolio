@@ -7,11 +7,11 @@
     <title>BANDALA, CHARLES ANDRE C. - PERSONAL WEBSITE</title>
 </head>
 <body>
+    <div id="nav_button" class="nav_hidden"></div>
     <main id="main">
         <section id="home">
-            <div id="image_profile"></div>
             <div id="rain_cont"></div>
-            <header>
+            <header id="nav_header">
                 <div id="title_card">
                     <div id="name_card">
                         <h1 onclick="location.href='index.html';">C a</h1>
@@ -33,16 +33,45 @@
                 </div>
             </header>
             <div id="name_home">
-                <h1>Charles Andre Bandala</h1>
+                <h2>Hello! I am</h2>
+                <h1>charles andre</h1>
                 <div id="desc_home">
                     <h2 class="desc_def">Game Developer</h2>
                     <h2 class="desc_def">Front End Developer</h2>
                     <h2 class="desc_def">UI/UX Designer</h2>
                 </div>
             </div>
-            <div id="home_footer"></div>
+            <div id="country">
+                <p>Based in the<br/>Philippines</p>
+                <img src="assets/img/globe.png">
+            </div>
         </section>
-        <section class="hidden" id="about"></section>
+        <section id="about">
+            <div id="bg"></div>
+            <div id="cont_profile">
+                <div id="cont_photo">
+                    <img id="desc_img" class="desc_img_inact" src="assets/img/profile_pic_home.png">
+                </div>
+                <div id="cont_desc">
+                    <h1 id="desc_header" class="desc_inact_h1">who am i?</h1>
+                    <div id="h2_cont">
+                        <h2 id="desc_subheader" class="desc_inact_h2">A programmer? No. A pro-grammer.</h2>
+                    </div>
+                    <div class="cont_desc_info">
+                        <p id="desc_info" class="desc_inact_p">I am Charles Andre Bandala, a well-rounded Computer Science</p>  
+                    </div>
+                    <div class="cont_desc_info">
+                        <p id="desc_info" class="desc_inact_p">undergraduate student with a passion for software development.</p>  
+                    </div>
+                    <div class="cont_desc_info">
+                        <p id="desc_info" class="desc_inact_p">Possesses extensive background in Game Development, Software</p> 
+                    </div>
+                    <div class="cont_desc_info">
+                        <p id="desc_info" class="desc_inact_p">Development, and Graphic Design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
     <script src="script.js"></script>

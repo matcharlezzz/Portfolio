@@ -23,7 +23,20 @@ function rain(){
 
 setInterval(function(){
     rain();
-}, 70)
+}, 100)
+
+/* Dynamic Navigation Button */
+const home = document.querySelectorAll("#home");
+const nav_butt = document.getElementById("nav_button");
+const header_ob = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        nav_butt.classList.toggle("nav_active", !entry.isIntersecting)
+    });
+}, {
+    threshold: 0.7
+});
+
+home.forEach((el) => header_ob.observe(el));
 
 /* Description Scrolling */
 const desc_cont = document.getElementById("desc_home");
@@ -53,14 +66,24 @@ function animate_desc(){
 
 window.onload = animate_desc;
 
-/* Parallax Effect */
-const hiddenItems = document.querySelectorAll('.hidden');
-const observer = new IntersectionObserver((entries) => {
+/* About Lights */
+const about_page = document.querySelectorAll("#about");
+const desc_img = document.getElementById("desc_img");
+const desc_header = document.getElementById("desc_header");
+const desc_subheader = document.getElementById("desc_subheader");
+const desc_info = document.querySelectorAll("#desc_info");
+const about_ob = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        entry.target.classList.toggle('active', entry.isIntersecting);
+        desc_img.classList.toggle('desc_img_act', entry.isIntersecting);
+        desc_header.classList.toggle('desc_active_h1', entry.isIntersecting);
+        desc_subheader.classList.toggle('desc_active_h2', entry.isIntersecting);
+        function light_p (el){
+            el.classList.toggle('desc_active_p', entry.isIntersecting);
+        }
+        desc_info.forEach((el) => light_p(el));
     });
 }, {
-    threshold: 0.15
+    threshold: 0.5
 });
 
-observer.observe(hiddenItems[0])
+about_page.forEach((el) => about_ob.observe(el));
