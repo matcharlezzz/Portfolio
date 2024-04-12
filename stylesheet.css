@@ -172,18 +172,17 @@ header {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -2;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .digit_txt {
     height: 100%;
     position: absolute;
     font-family: DigiFont;
-    font-size: 52pt;
     color: #AAC7D8;
     text-shadow: 0px 0px 10px #aac7d8;
     filter: blur(5px);
-    animation: rain linear 5s;
 }
 
 #name_home {
@@ -304,6 +303,27 @@ header {
     height: 100%;
 }
 
+#bg #bg_circle{
+    position: absolute;
+    right: -6%;
+    bottom: -12%;
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    background-color: #8fa6b2;
+    filter: blur(200px);
+}
+
+.bg_inact {
+    opacity: 0%;
+    transition: all linear 0.25s;
+}
+
+.bg_active {
+    opacity: 100%;
+}
+
 #cont_profile {
     position: absolute;
     top: 50%;
@@ -327,13 +347,13 @@ header {
 #cont_photo img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 30%;
+    border-radius: 30% 20% 30% 20%;
 }
 
 .desc_img_inact {
     opacity: 50%;
     filter: blur(5px);
-    box-shadow: 0px 0px 0px;
+    box-shadow: 0px 0px 0px #8fa6b2;
     transition: all 0.5s ease-in-out;
 }
 
@@ -436,6 +456,55 @@ header {
     opacity: 100%;
     transform: translateY(0%);
     filter: blur(0px);
+}
+
+#btn_about {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
+    right: 4%;
+    width: 165px;
+    height: 75px;
+    border-radius: 50px;
+    background-color: #384852;
+}
+
+#btn_text {
+    display: inline-block;
+    pointer-events: none;
+}
+
+#btn_text h1 {
+    color: #E6E6E6;
+    font-family: GenFont;
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 0%;
+}
+
+#btn_text p {
+    color: #768A96;
+    font-family: GenFont;
+    font-size: 8pt;
+    margin: 0%;
+}
+
+.btn_inact {
+    transform: translateX(125%);
+    filter: blur(5px);
+    transition: all 0.25s ease-in-out;
+}
+
+.btn_active {
+    filter: blur(0px);
+    transform: translateX(0%);
+    cursor: pointer;
+}
+
+.btn_active:hover {
+    box-shadow: 0px 0px 15px #7094a8;
 }
 
 @keyframes rain {
