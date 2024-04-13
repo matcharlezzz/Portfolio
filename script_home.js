@@ -31,20 +31,10 @@ setInterval(function(){
     rain(rain_cont[1], 32, "rain linear 15s", 15000);
 }, 200);
 
-/* Dynamic Navigation Button */
-const home = document.querySelectorAll("#home");
-const nav_butt = document.getElementById("nav_button");
-const header_ob = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        nav_butt.classList.toggle("nav_active", !entry.isIntersecting)
-    });
-}, {
-    threshold: 0.5
-});
 
-home.forEach((el) => header_ob.observe(el));
 
 /* Description Scrolling */
+
 const desc_cont = document.getElementById("desc_home");
 let i = 0;
 
@@ -73,6 +63,7 @@ function animate_desc(){
 window.onload = animate_desc;
 
 /* About Lights */
+
 const about_page = document.querySelectorAll("#about");
 const about_bg = document.querySelectorAll(".bg_inact");
 const desc_img = document.getElementById("desc_img");
@@ -101,13 +92,43 @@ const about_ob = new IntersectionObserver((entries) => {
 
 about_page.forEach((el) => about_ob.observe(el));
 
+/* About Button */
+
 const about_btn = document.getElementById("btn_about");
+const cont_desc = document.querySelectorAll("#cont_desc");
 
 const about_edge_ob = new IntersectionObserver ((entries) => {
     entries.forEach((entry) => {
         about_btn.classList.toggle("btn_active", entry.isIntersecting);
     });
 }, {
-    threshold: 0.95
+    threshold: 1
 });
-about_page.forEach((el) => about_edge_ob.observe(el));
+cont_desc.forEach((el) => about_edge_ob.observe(el));
+
+/* Footer Section */
+
+const footer_sec = document.querySelectorAll("#cont_footer");
+const footer_content = document.getElementById("footer_content");
+const footer_logo = document.getElementById("footer_logo");
+const about_sec = document.getElementById("about");
+
+const footer_ob = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const about_sec = document.getElementById("about");
+        if(entry.isIntersecting){
+            footer_content.style.top = "50%";
+            footer_logo.style.top = "50%";
+            about_sec.style.boxShadow = "0px 20px 20px black";
+        }
+        else {
+            footer_content.style.top = "-20%";
+            footer_logo.style.top = "-20%";
+            about_sec.style.boxShadow = "0px 8px 8px black";
+        }
+    });
+}, {
+    threshold: 0.3
+})
+
+footer_sec.forEach((el) => footer_ob.observe(el));

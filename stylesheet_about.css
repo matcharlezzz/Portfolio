@@ -1,0 +1,294 @@
+#name_card h1 {
+    color: #192024;
+}
+
+.nav_text {
+    color: #192024;
+}
+
+.ud {
+    background-color: #192024;
+}
+
+#intro {
+    position: relative;
+    width: 100vw;
+    height: 200vh;
+    background-color: #E6E6E6;
+    z-index: 1;
+    display: block;
+}
+
+#cont {
+    width: 80%;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+}
+
+#title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 52pt;
+    font-family: GenFont;
+    color: #192024;
+    width: fit-content;
+}
+
+#sep {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #AAC7D8;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    opacity: 100%;
+}
+
+#intro_desc {
+    position: relative;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#intro_desc p {
+    margin: 0;
+    width: 35%;
+    height: fit-content;
+    font-family: GenFont;
+    font-size: 14pt;
+    color: #192024;
+    line-height: 2;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#intro_img {
+    width: 50%;
+}
+
+#intro_img img{
+    max-width: 100%;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px #19202415;
+}
+
+#educ {
+    position: relative;
+    width: 100vw;
+    height: 180vh;
+    background-color: #E6E6E6;
+    z-index: 1;
+    display: block;
+}
+
+#educ #cont, #skills #cont {
+    top: 0px;
+}
+
+#educ #cont #title{
+    text-align: center;
+}
+
+.educ_div {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56vw;
+    height: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.educ_div:nth-child(3){
+    transition-delay: 100ms;
+    animation-delay: 100ms;
+}
+
+.educ_div:nth-child(4){
+    transition-delay: 200ms;
+    animation-delay: 200ms;
+}
+
+.educ_div:nth-child(5){
+    transition-delay: 300ms;
+    animation-delay: 300ms;
+}
+
+.educ_img {
+    width: 300px;
+    height: 300px;
+}
+
+.educ_img img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px #1920246e;
+}
+
+.educ_desc {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    height: fit-content;
+    font-family: GenFont;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #192024;
+}
+
+.educ_desc p {
+    font-family: GenFont;
+    font-weight: normal;
+    color: #192024;
+    font-size: 12pt;
+}
+
+.educ_inact {
+    opacity: 0%;
+    transform: translateX(-200%);
+    filter: blur(10px);
+    transition: all 1s ease-in-out;
+}
+
+.educ_active {
+    opacity: 100%;
+    transform: translateX(-50%);
+    filter: blur(0px);
+    animation: educ_in ease-in-out 1.5s;
+}
+
+#skills {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E6E6E6;
+    z-index: 1;
+    display: block;
+    box-shadow: 0px 30px 20px black;
+    border-radius: 0px 0px 50px 50px;
+}
+
+#skills_cont {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill_div{
+    font-family: GenFont;
+    font-size: 16pt;
+    color: #1920246e;
+    width: 380px;
+    height: 420px;
+    overflow: hidden;
+}
+
+.skill_div:nth-child(1){
+    transition-delay: 100ms;
+}
+
+.skill_div:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.skill_div:nth-child(3){
+    transition-delay: 300ms;
+}
+
+.skill_img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+}
+
+.skill_img img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+}
+
+.skill_info{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: GenFont;
+    font-size: 18pt;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 15px;
+    color: #192024;
+    width: 100%;
+    height: fit-content;
+}
+
+.skill_info p {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: justify;
+    text-justify: inter-word;
+    color: #68757d;
+    font-size: 12pt;
+    width: 90%;
+}
+
+.skill_inact {
+    opacity: 0%;
+    visibility: hidden;
+    filter: blur(5px);
+    transition: all 0.5s ease-in-out;
+}
+
+.skill_active {
+    opacity: 100%;
+    visibility: visible;
+    filter: blur(0px);
+}
+
+@keyframes educ_in {
+    0% {
+        opacity: 0%;
+        transform: translateX(-200%);
+        filter: blur(10px);
+    }
+    35% {
+        opacity: 35%;
+        transform: translateX(-20%);
+        filter: blur(5px);
+    }
+    75% {
+        opacity: 75%;
+        transform: translateX(-60%);
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(-50%);
+        filter: blur(0px);
+    }
+}

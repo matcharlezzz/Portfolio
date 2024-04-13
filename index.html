@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet_home.css">
+    <link rel="stylesheet" href="stylesheet_global.css">
     <title>BANDALA, CHARLES ANDRE C. - PERSONAL WEBSITE</title>
 </head>
 <body>
-    <div id="nav_button" class="nav_hidden"></div>
+    <div id="nav_button" class="nav_hidden">
+
+    </div>
     <main id="main">
         <section id="home">
             <div id="rain_cont"></div>
@@ -19,16 +22,16 @@
                     </div>
                 </div>
                 <div id="nav">
-                    <a class="nav_text">
+                    <a class="nav_text" href="about.html">
                         About
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text">
+                    <a class="nav_text" href="projects.html">
                         Projects
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text">
-                        Socials
+                    <a class="nav_text" href="connect.html">
+                        Let's Connect
                         <div class="ud"></div>
                     </a>
                 </div>
@@ -38,7 +41,7 @@
                 <h1>charles andre</h1>
                 <div id="desc_home">
                     <h2 class="desc_def">Game Developer</h2>
-                    <h2 class="desc_def">Front End Developer</h2>
+                    <h2 class="desc_def">Front End Web Developer</h2>
                     <h2 class="desc_def">UI/UX Designer</h2>
                 </div>
             </div>
@@ -74,15 +77,36 @@
                     </div>
                 </div>
             </div>
-            <div id="btn_about" class="btn_inact">
-                <div id="btn_text">
-                    <h1>know more</h1>
-                    <p>About</p>
+            <a href="about.html">
+                <div id="btn_about" class="btn_inact">
+                    <div id="btn_text">
+                        <h1>know more</h1>
+                        <p>About</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+        <div id="cont_footer">
+            <div id="footer_logo">
+                <p>C a</p>
+            </div>
+            <div id="footer_content">
+                <p>© Made by Charles Andre Bandala</p>
+                <div id="footer_img_cont">
+                    <a href="https://www.facebook.com/profile.php?id=61558477887808">
+                        <img id="footer_img" src="assets/img/facebook.png">
+                    </a>
+                    <a href="https://github.com/magniefique">
+                        <img id="footer_img" src="assets/img/github.png">
+                    </a>
+                    <a href="https://www.linkedin.com/in/charles-andre-bandala/">
+                        <img id="footer_img" src="assets/img/linkedin.png">
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
-    <footer></footer>
-    <script src="script.js"></script>
+    <script src="script_home.js"></script>
+    <script src="script_global.js"></script>
 </body>
 </html>

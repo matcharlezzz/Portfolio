@@ -1,153 +1,3 @@
-@font-face {
-    font-family: HeaderMain;
-    src: url(assets/fonts/HeaderTitle.otf);
-}
-
-@font-face {
-    font-family: HeaderMain1;
-    src: url(assets/fonts/HeaderTitle1.otf);
-}
-
-@font-face {
-    font-family: GenFont;
-    src: url(assets/fonts/GenFont.ttf);
-}
-
-@font-face {
-    font-family: DigiFont;
-    src: url(assets/fonts/DigiFont.TTF);
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-    overflow-x: hidden;
-    background-color: #192024;
-}
-
-section {
-    width: 80%;
-    height: 100vh;
-}
-
-header {
-    position: absolute;
-    width: 100%;
-    height: 12vh;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-}
-
-#title_card {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 5%;
-    height: 80%;
-    display: flex;
-    gap: 15px;
-}
-
-#logo {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    background-color: aqua;
-}
-
-#name_card {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    height: fit-content;
-    cursor: pointer;
-}
-
-#name_card h1 {
-    font-family: HeaderMain1;
-    font-size: 30pt;
-    font-weight: 100;
-    color: #E6E6E6;
-}
-
-#nav {
-    margin-right: 5%;
-    width: 40%;
-    height: 100%;
-    float: right;
-    display: flex;
-    justify-content: right;
-    gap: 10%;
-}
-
-.nav_text {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    height: fit-content;
-    margin-top: 5px;
-    color: #E6E6E6;
-    font-family: GenFont;
-    font-size: 12pt;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.ud {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 10px;
-    width: 0;
-    height: 0;
-    background-color: #E6E6E6;
-    border-radius: 10px;
-    visibility: hidden;
-}
-
-.nav_text:hover .ud {
-    visibility: visible;
-    transition-property: all;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    width: 5px;
-    height: 5px;
-}
-
-#nav_button {
-    position: fixed;
-    top: 5%;
-    right: 4%;
-    width: 100px;
-    height: 100px;
-    background-color: #7da3b7;
-    z-index: 10;
-}
-
-.nav_hidden {
-    opacity: 0%;
-    visibility: hidden;
-    filter: blur(5px);
-    border-radius: 10%;
-    transition: all 0.25s ease-in-out;
-}
-
-.nav_active {
-    opacity: 100%;
-    visibility: visible;
-    filter: blur(0px);
-    border-radius: 50%;
-}
-
-.nav_active:hover {
-    box-shadow: 0px 0px 20px #6e90a2e0;
-}
-
 #image_profile {
     position: absolute;
     width: 100%;
@@ -165,6 +15,7 @@ header {
     transform: translateX(-50%);
     width: 100vw;
     height: 100vh;
+    background-color: #192024;
 }
 
 #rain_cont {
@@ -295,6 +146,11 @@ header {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: #192024;
+    box-shadow: 0px 20px 20px black;
+    border-radius: 0px 0px 50px 50px;
+    z-index: 1;
+    transition: all 0.25s ease-in-out;
 }
 
 #about #bg {
@@ -313,6 +169,7 @@ header {
     border-radius: 200px;
     background-color: #8fa6b2;
     filter: blur(200px);
+    z-index: -1;
 }
 
 .bg_inact {
@@ -463,12 +320,11 @@ header {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 5%;
+    bottom: 8%;
     right: 4%;
     width: 165px;
     height: 75px;
     border-radius: 50px;
-    background-color: #384852;
 }
 
 #btn_text {
@@ -485,14 +341,14 @@ header {
 }
 
 #btn_text p {
-    color: #768A96;
+    color: #899daa;
     font-family: GenFont;
     font-size: 8pt;
     margin: 0%;
 }
 
 .btn_inact {
-    transform: translateX(125%);
+    transform: translateX(130%);
     filter: blur(5px);
     transition: all 0.25s ease-in-out;
 }
@@ -501,10 +357,12 @@ header {
     filter: blur(0px);
     transform: translateX(0%);
     cursor: pointer;
+    background-color: #384852;
 }
 
 .btn_active:hover {
-    box-shadow: 0px 0px 15px #7094a8;
+    background-color: #435d6e;
+    box-shadow: 0px 0px 15px #577281;
 }
 
 @keyframes rain {
