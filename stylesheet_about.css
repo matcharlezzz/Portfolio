@@ -20,9 +20,9 @@
 }
 
 #cont {
-    width: 80%;
+    width: 70%;
     position: relative;
-    top: 200px;
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
@@ -32,23 +32,24 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 52pt;
+    font-size: 62pt;
     font-family: GenFont;
+    font-weight: bold;
     color: #192024;
-    width: fit-content;
+    margin: 0;
 }
 
 #sep {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 100%;
     height: 2px;
     border-radius: 2px;
     background-color: #AAC7D8;
     margin-top: 8%;
-    margin-bottom: 8%;
-    opacity: 100%;
+    margin-bottom: 9%;
+    opacity: 50%;
 }
 
 #intro_desc {
@@ -56,31 +57,39 @@
     width: 100%; 
     height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
+}
+
+#intro_txt {
+    width: 30%;
+    height: fit-content;
 }
 
 #intro_desc p {
     margin: 0;
-    width: 35%;
+    width: 100%;
     height: fit-content;
     font-family: GenFont;
-    font-size: 14pt;
+    font-size: 12pt;
     color: #192024;
     line-height: 2;
     text-align: justify;
     text-justify: inter-word;
 }
 
+#intro_desc p:nth-child(2) {
+    color: #7c929e;
+}
+
 #intro_img {
-    width: 50%;
+    width: 60%;
 }
 
 #intro_img img{
     max-width: 100%;
-    border-radius: 25px;
-    box-shadow: 0px 0px 10px #19202415;
+    box-shadow: 0px 0px 15px #19202415;
 }
 
 #educ {
@@ -93,11 +102,7 @@
 }
 
 #educ #cont, #skills #cont {
-    top: 0px;
-}
-
-#educ #cont #title{
-    text-align: center;
+    top: 0;
 }
 
 .educ_div {
@@ -237,7 +242,7 @@
     left: 50%;
     transform: translate(-50%);
     font-family: GenFont;
-    font-size: 18pt;
+    font-size: 16pt;
     font-weight: normal;
     text-align: center;
     margin-top: 15px;

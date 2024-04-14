@@ -1,8 +1,120 @@
-#intro {
+#projects {
     position: relative;
     width: 100vw;
-    height: 200vh;
     background-color: #192024;
     z-index: 1;
     display: block;
+}
+
+#cont {
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+#title {
+    position: relative;
+    font-size: 62pt;
+    font-family: GenFont;
+    font-weight: bold;
+    color: #E6E6E6;
+    margin: 0;
+    text-shadow: 0px 0px 10px #c0c0c0;
+}
+
+#subtitle {
+    position: relative;
+    font-family: GenFont;
+    font-size: 14pt;
+    color: #AAC7D8;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+#project_cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.project_div {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: brown;
+    border-radius: 100px;
+    transition: all ease-in-out 0.25s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: GenFont;
+    color: #E6E6E6;
+    
+    box-shadow: inset 10px 0px 30px #aac7d86d,
+                0px 0px 20px #e6e6e65a;;
+}
+
+.project_div:hover {
+    height: 500px;
+}
+
+.project_div:nth-child(1){
+    background-image: url(assets/img/projects_rockt.png);
+}
+
+.project_div:nth-child(2){
+    background-image: url(assets/img/projects_luuseed.png);
+}
+
+.project_overlay {
+    position: relative;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #21292f);
+    background-size: 150% 150%;
+    background-position: 100% 100%;
+    opacity: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    box-shadow: inset 10px 0px 30px #aac7d86d;
+    transition: all 0.25s ease-in-out;
+}
+
+.project_div:hover .project_overlay {
+    opacity: 100%;
+    background-position: 50% 45%;
+}
+
+.project_info {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 80%t;
+    height: fit-content;
+    transition: all 0.25s ease-in-out;
+    text-shadow: 0px 0px 5px #1920246d;
+    opacity: 0%;
+}
+
+.project_info h1 {
+    font-size: 42pt;
+    margin-bottom: 5px;
+}
+
+.project_info p {
+    font-size: 12pt;
+    width: 90%;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.project_div:hover .project_info {
+    top: 70%;
+    opacity: 100%;
 }
