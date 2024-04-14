@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="stylesheet_global.css">
     <title>BANDALA, CHARLES ANDRE C. - PERSONAL WEBSITE</title>
 </head>
-<body>
-    <div id="nav_button" class="nav_hidden">
-
+<body id="body_div">
+    <div id="nav_button" class="nav_hidden" onclick="openNav()">
+        <img id="nav_img" src="assets/img/nav.png">
+    </div>
+    <div id="side_bar" class="side_bar_inact">
+        <div id="side_bar_cont">
+            <p>© Made by Charles Andre Bandala</p>
+            <a href="index.html">
+                <h1>home</h1>
+            </a>
+            <a href="about.html">
+                <h1>about</h1>
+            </a>
+            <a href="projects.html">
+                <h1>projects</h1>
+            </a>
+            <a href="connect.html">
+                <h1>connect</h1>
+            </a>
+        </div>
     </div>
     <main id="main">
         <section id="home">
@@ -22,16 +39,20 @@
                     </div>
                 </div>
                 <div id="nav">
-                    <a class="nav_text" href="about.html">
+                    <a class="nav_text pc" href="about.html">
                         About
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text" href="projects.html">
+                    <a class="nav_text pc" href="projects.html">
                         Projects
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text" href="connect.html">
-                        Let's Connect
+                    <a class="nav_text pc" href="connect.html">
+                        Connect
+                        <div class="ud"></div>
+                    </a>
+                    <a class="nav_text phone" onclick="openNav()">
+                        Menu
                         <div class="ud"></div>
                     </a>
                 </div>
@@ -74,6 +95,18 @@
                     </div>
                     <div class="cont_desc_info">
                         <p id="desc_info" class="desc_inact_p">Development, and Graphic Design.</p>
+                    </div>
+                    
+                    <p id="desc_info" class="phone">
+                        I am Charles Andre Bandala, a well-rounded Computer Science undergraduate student with a passion for software development. Possesses extensive background in Game Development, Software Development, and Graphic Design.
+                    </p>
+
+                    <div id="logos">
+                        <img src="assets/img/csharp.png">
+                        <img src="assets/img/python.png">
+                        <img src="assets/img/js.png">
+                        <img src="assets/img/html5.png">
+                        <img src="assets/img/unity.png">
                     </div>
                 </div>
             </div>

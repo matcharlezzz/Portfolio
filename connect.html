@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet_global.css">
-    <link rel="stylesheet" href="stylesheet_subpage.css">
+    <link rel="stylesheet" href="stylesheet_connect.css">
     <title>BANDALA, CHARLES ANDRE C. - PERSONAL WEBSITE</title>
 </head>
-<body>
-    <div id="nav_button" class="nav_hidden"></div>
+<body id="body_div">
+    <div id="nav_button" class="nav_hidden" onclick="openNav()">
+        <img id="nav_img" src="assets/img/nav.png">
+    </div>
+    <div id="side_bar" class="side_bar_inact">
+        <div id="side_bar_cont">
+            <p>© Made by Charles Andre Bandala</p>
+            <a href="index.html">
+                <h1>home</h1>
+            </a>
+            <a href="about.html">
+                <h1>about</h1>
+            </a>
+            <a href="projects.html">
+                <h1>projects</h1>
+            </a>
+            <a href="connect.html">
+                <h1>connect</h1>
+            </a>
+        </div>
+    </div>
     <main id="main">
-        <section id="intro">
+        <section id="connect">
             <header id="nav_header">
                 <div id="title_card">
                     <div id="name_card">
@@ -18,21 +37,51 @@
                     </div>
                 </div>
                 <div id="nav">
-                    <a class="nav_text" href="about.html">
+                    <a class="nav_text pc" href="about.html">
                         About
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text" href="projects.html">
+                    <a class="nav_text pc" href="projects.html">
                         Projects
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text active" href="connect.html">
-                        Let's Connect
+                    <a class="nav_text pc" href="connect.html">
+                        Connect
+                        <div class="ud"></div>
+                    </a>
+                    <a class="nav_text phone" onclick="openNav()">
+                        Menu
                         <div class="ud"></div>
                     </a>
                 </div>
             </header>
-            <div id="about_tlheader"></div>
+            <div id="cont">
+                <div id="title">connect</div>
+                <div id="subtitle">Let us execute what you envision, together.</div>
+                <div id="sep"></div>
+                <div id="connect_cont">
+                    <a href="mailto:charlesandrec.bandala@gmail.com?">
+                        <div class="connect_img">
+                            <img src="assets/img/gmail-1.png">
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61558477887808">
+                        <div class="connect_img">
+                            <img src="assets/img/facebook-1.png">
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/charles-andre-bandala/">
+                        <div class="connect_img">
+                            <img src="assets/img/linkedin-1.png">
+                        </div>
+                    </a>
+                    <a href="https://github.com/magniefique">
+                        <div class="connect_img">
+                            <img src="assets/img/github-1.png">
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
         <div id="cont_footer">
             <div id="footer_logo">
@@ -55,6 +104,7 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script_global.js"></script>
+    <script src="script_connect.js"></script>
 </body>
 </html>

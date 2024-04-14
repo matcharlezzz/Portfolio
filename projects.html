@@ -7,8 +7,27 @@
     <link rel="stylesheet" href="stylesheet_projects.css">
     <title>BANDALA, CHARLES ANDRE C. - PERSONAL WEBSITE</title>
 </head>
-<body>
-    <div id="nav_button" class="nav_hidden"></div>
+<body id="body_div">
+    <div id="nav_button" class="nav_hidden" onclick="openNav()">
+        <img id="nav_img" src="assets/img/nav.png">
+    </div>
+    <div id="side_bar" class="side_bar_inact">
+        <div id="side_bar_cont">
+            <p>© Made by Charles Andre Bandala</p>
+            <a href="index.html">
+                <h1>home</h1>
+            </a>
+            <a href="about.html">
+                <h1>about</h1>
+            </a>
+            <a href="projects.html">
+                <h1>projects</h1>
+            </a>
+            <a href="connect.html">
+                <h1>connect</h1>
+            </a>
+        </div>
+    </div>
     <main id="main">
         <section id="projects">
             <header id="nav_header">
@@ -18,49 +37,86 @@
                     </div>
                 </div>
                 <div id="nav">
-                    <a class="nav_text" href="about.html">
+                    <a class="nav_text pc" href="about.html">
                         About
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text active" href="projects.html">
+                    <a class="nav_text pc" href="projects.html">
                         Projects
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text" href="connect.html">
-                        Let's Connect
+                    <a class="nav_text pc" href="connect.html">
+                        Connect
+                        <div class="ud"></div>
+                    </a>
+                    <a class="nav_text phone" onclick="openNav()">
+                        Menu
                         <div class="ud"></div>
                     </a>
                 </div>
             </header>
             <div id="cont">
+                <div id="bg_el"></div>
+                <div id="bg_el"></div>
                 <h1 id="title">my works</h1>  
                 <p id="subtitle">Pushing for creativity, making artistic visions come to life, while not sacrificing quality.</p>
+                <div id="sep"></div>
                 <div id="project_cont">
-                    <div class="project_div">
+                    <div class="project_div" onclick="location.href='https://github.com/magniefique/Project-ROCKT-Demo';">
                         <div class="project_overlay"></div>
                         <div class="project_info">
                             <h1>R.O.C.K.T Flap [To be released]</h1>
-                            <p>A flappy bird inspired game with new mechanics. Made with Unity Game Engine and C# Programming Language.</p>
+                            <p id="made_with">Made with: Unity Game Engine, C#</p>
+                            <p>A flappy bird inspired game with new added mechanics for better replayability.</p>
+                            
                         </div>
                     </div>
-                    <div class="project_div">
+                    <div class="project_div" onclick="location.href='https://github.com/magniefique/luseed';">
                         <div class="project_overlay"></div>
                         <div class="project_info">
                             <h1>luseed [Ongoing Development]</h1>
+                            <p id="made_with">Made with: Python</p>
                             <p>A programming language tailored for budding programmers.</p>
+                            
                         </div>
                     </div>
-                    <div class="project_div">
+                    <div class="project_div" onclick="location.href='https://github.com/magniefique/HueBet-Beta';">
                         <div class="project_overlay"></div>
+                        <div class="project_info">
+                            <h1>HueBet: recoloured</h1>
+                            <p id="made_with">Made with: Python, Pygame library</p>
+                            <p>A game based on the famous carnival betting game, color game.</p>
+                            
+                        </div>
                     </div>
-                    <div class="project_div">
+                    <div class="project_div" onclick="location.href='https://github.com/steguiosaur/SaLitrato';">
                         <div class="project_overlay"></div>
+                        <div class="project_info">
+                            <h1>SaLitrato</h1>
+                            <p id="made_with">Made with: Python, Tesseract OCR</p>
+                            <p>An in-image text searching application.</p>
+                            
+                        </div>
                     </div>
-                    <div class="project_div">
+                    <div class="project_div" onclick="location.href='https://github.com/magniefique/Catwalk-AI';">
                         <div class="project_overlay"></div>
+                        <div class="project_info">
+                            <h1>Catwalk A.I.</h1>
+                            <p id="made_with">Made with: Python</p>
+                            <p>A simple goal-driven intelligent agent.</p>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
+            <a href="connect.html">
+                <div id="btn_connect">
+                    <div id="btn_text">
+                        <h1>let's talk</h1>
+                        <p>Connect</p>
+                    </div>
+                </div>
+            </a>
         </section>
         <div id="cont_footer">
             <div id="footer_logo">
@@ -84,5 +140,6 @@
     </main>
 
     <script src="script_global.js"></script>
+    <script src="script_projects.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+.phone {
+    display: none;
+}
+
 #name_card h1 {
     color: #192024;
 }
@@ -13,7 +17,7 @@
 #intro {
     position: relative;
     width: 100vw;
-    height: 200vh;
+    height: 210vh;
     background-color: #E6E6E6;
     z-index: 1;
     display: block;
@@ -37,6 +41,15 @@
     font-weight: bold;
     color: #192024;
     margin: 0;
+}
+
+#subtitle {
+    position: relative;
+    font-family: GenFont;
+    font-size: 14pt;
+    color: #19202478;
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 #sep {
@@ -335,5 +348,115 @@
         opacity: 100%;
         transform: translateX(-50%);
         filter: blur(0px);
+    }
+}
+
+@media only screen and (max-width: 1255px) {
+    #intro {
+        height: fit-content;
+        padding-bottom: 100px;
+    }
+
+    #intro #title {
+        padding-top: 100px;
+    }
+
+    #educ {
+        position: relative;
+        width: 100vw;
+        height: fit-content;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 1113px) {
+    .phone {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 891) {
+    #intro_desc p {
+        font-size: 10pt;
+    }
+
+    .educ_desc {
+        font-size: 14pt;
+    }
+
+    .educ_desc p {
+        font-size: 10pt;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #title {
+        font-size: 32pt;
+    }
+
+    #subtitle {
+        font-size: 12pt;
+    }
+
+    #intro_desc {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #intro_txt {
+        width: 80%;
+    }
+
+    .educ_img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+
+    .educ_img img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .educ_desc {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }
+
+    .educ_desc p {
+        font-size: 10pt;
+    }
+
+    .educ_div {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        gap: 100px;
+    }
+
+    #skills {
+        height: fit-content;
+    }
+
+    #skills_cont {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .skill_div{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #btn_projects {
+        bottom: 2%;
     }
 }

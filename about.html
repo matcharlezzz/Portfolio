@@ -7,8 +7,27 @@
     <link rel="stylesheet" href="stylesheet_about.css">
     <title>BANDALA, CHARLES ANDRE C. - PERSONAL WEBSITE</title>
 </head>
-<body>
-    <div id="nav_button" class="nav_hidden"></div>
+<body id="body_div">
+    <div id="nav_button" class="nav_hidden" onclick="openNav()">
+        <img id="nav_img" src="assets/img/nav.png">
+    </div>
+    <div id="side_bar" class="side_bar_inact">
+        <div id="side_bar_cont">
+            <p>© Made by Charles Andre Bandala</p>
+            <a href="index.html">
+                <h1>home</h1>
+            </a>
+            <a href="about.html">
+                <h1>about</h1>
+            </a>
+            <a href="projects.html">
+                <h1>projects</h1>
+            </a>
+            <a href="connect.html">
+                <h1>connect</h1>
+            </a>
+        </div>
+    </div>
     <main id="main">
         <section id="intro">
             <header id="nav_header">
@@ -18,22 +37,27 @@
                     </div>
                 </div>
                 <div id="nav">
-                    <a class="nav_text active" href="about.html">
+                    <a class="nav_text pc" href="about.html">
                         About
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text" href="projects.html">
+                    <a class="nav_text pc" href="projects.html">
                         Projects
                         <div class="ud"></div>
                     </a>
-                    <a class="nav_text" href="connect.html">
-                        Let's Connect
+                    <a class="nav_text pc" href="connect.html">
+                        Connect
+                        <div class="ud"></div>
+                    </a>
+                    <a class="nav_text phone" onclick="openNav()">
+                        Menu
                         <div class="ud"></div>
                     </a>
                 </div>
             </header>
             <div id="cont">
                 <h1 id="title">about me</h1>
+                <p id="subtitle">Not just a programmer, a pro-grammer and a pro-gamer.</p>
                 <div id="sep"></div>
                 <div id="intro_desc">
                     <div id="intro_img">
@@ -41,7 +65,6 @@
                     </div>
                     <div id="intro_txt">
                         <p>With an experience in Game Development, Software Development, and Graphic Design, as well as being a Gamer myself, I can help you make your visions come to life. Working together, we can make something Legen-wait-for-it-Dary.</p>
-                        <p><br/>Not just a programmer. A Pro-Grammer and a Pro-Gamer.</p>
                     </div>
                 </div>
             </div>

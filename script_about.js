@@ -55,7 +55,7 @@ const skills_op = new IntersectionObserver((entries) => {
         skills_div.forEach((el) => skill_desc(el));
     });
 }, {
-    threshold: 0.6
+    threshold: 0.3
 });
 
 skills_sec.forEach((el) => skills_op.observe(el));

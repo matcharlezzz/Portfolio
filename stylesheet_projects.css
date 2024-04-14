@@ -1,9 +1,50 @@
+.phone {
+    display: none;
+}
+
 #projects {
     position: relative;
     width: 100vw;
     background-color: #192024;
     z-index: 1;
     display: block;
+    overflow: hidden;
+    box-shadow: 0px 30px 20px black;
+    border-radius: 0px 0px 50px 50px;
+}
+
+#sep {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    margin-top: 8%;
+    margin-bottom: 9%;
+    background-color: #AAC7D8;
+    opacity: 50%;
+}
+
+#bg_el {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 100px #E6E6E6;
+    background-color: #E6E6E6;
+    position: absolute;
+    right: -20%;
+    bottom: -12%;
+    margin: 0;
+    filter: blur(200px);
+    z-index: -1;
+}
+
+#bg_el:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    right: 100%;
+    bottom: 100%;
 }
 
 #cont {
@@ -57,7 +98,10 @@
     color: #E6E6E6;
     
     box-shadow: inset 10px 0px 30px #aac7d86d,
-                0px 0px 20px #e6e6e65a;;
+                0px 0px 10px #e6e6e65a,            
+                0px 0px 35px #101517;
+
+    cursor: pointer;
 }
 
 .project_div:hover {
@@ -70,6 +114,18 @@
 
 .project_div:nth-child(2){
     background-image: url(assets/img/projects_luuseed.png);
+}
+
+.project_div:nth-child(3){
+    background-image: url(assets/img/projects_huebet.png);
+}
+
+.project_div:nth-child(4){
+    background-image: url(assets/img/projects_salitrato.png);
+}
+
+.project_div:nth-child(5){
+    background-image: url(assets/img/projects_catwalk.png);
 }
 
 .project_overlay {
@@ -95,7 +151,7 @@
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
-    width: 80%t;
+    width: 90%;
     height: fit-content;
     transition: all 0.25s ease-in-out;
     text-shadow: 0px 0px 5px #1920246d;
@@ -117,4 +173,80 @@
 .project_div:hover .project_info {
     top: 70%;
     opacity: 100%;
+}
+
+#made_with {
+    color: #AAC7D8;
+    font-weight: bold;
+}
+
+#btn_connect {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 2%;
+    right: 4%;
+    width: 165px;
+    height: 75px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #384852;
+    transition: all 0.25s ease-in-out;
+}
+
+#btn_text {
+    display: inline-block;
+    pointer-events: none;
+}
+
+#btn_text h1 {
+    color: #E6E6E6;
+    font-family: GenFont;
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 0%;
+}
+
+#btn_text p {
+    color: #899daa;
+    font-family: GenFont;
+    font-size: 8pt;
+    margin: 0%;
+}
+
+#btn_connect:hover {
+    background-color: #435d6e;
+    box-shadow: 0px 0px 15px #577281;
+}
+
+@media screen and (max-width: 1113px) {
+    .phone {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #title {
+        font-size: 32pt;
+    }
+
+    #subtitle {
+        font-size: 12pt;
+    }
+
+    .project_info h1 {
+        font-size: 22pt;
+    }
+    
+    .project_info p {
+        font-size: 8pt;
+        width: 90%;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    #btn_connect {
+        bottom: 2%;
+    }
 }

@@ -1,0 +1,132 @@
+.phone {
+    display: none;
+}
+
+#name_card h1 {
+    color: #192024;
+}
+
+.nav_text {
+    color: #192024;
+}
+
+.ud {
+    background-color: #192024;
+}
+
+#connect {
+    position: relative;
+    width: 100vw;
+    background-color: #e6e6e6;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    box-shadow: 0px 30px 20px black;
+    border-radius: 0px 0px 50px 50px;
+}
+
+#cont {
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+#title {
+    position: relative;
+    font-size: 62pt;
+    font-family: GenFont;
+    font-weight: bold;
+    color: #192024;
+    margin: 0;
+}
+
+#subtitle {
+    position: relative;
+    font-family: GenFont;
+    font-size: 14pt;
+    color: #19202478;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+#sep {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    margin-top: 8%;
+    margin-bottom: 9%;
+    background-color: #AAC7D8;
+    opacity: 50%;
+}
+
+#connect_cont {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.connect_img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding: 32px;
+    box-shadow: 0px 0px 8px #b1b1b1;
+    border-radius: 50px 10px 50px 10px;
+    transition: all ease-in-out 0.25s;
+}
+
+.connect_img img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.connect_img:hover{
+    box-shadow: 0px 0px 30px #b1b1b1;
+}
+
+@media screen and (max-width: 1113px) {
+    .phone {
+        display: block;
+    }
+    
+    #connect_cont {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .connect_img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #title {
+        font-size: 32pt;
+    }
+
+    #subtitle {
+        font-size: 12pt;
+    }
+    
+    #sep {
+        margin-bottom: 100px;
+    }
+    
+    
+}

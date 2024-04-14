@@ -31,8 +31,6 @@ setInterval(function(){
     rain(rain_cont[1], 32, "rain linear 15s", 15000);
 }, 200);
 
-
-
 /* Description Scrolling */
 
 const desc_cont = document.getElementById("desc_home");
@@ -100,6 +98,7 @@ const cont_desc = document.querySelectorAll("#cont_desc");
 const about_edge_ob = new IntersectionObserver ((entries) => {
     entries.forEach((entry) => {
         about_btn.classList.toggle("btn_active", entry.isIntersecting);
+        if(entry.isIntersecting) about_edge_ob.unobserve(entry.target);
     });
 }, {
     threshold: 1
