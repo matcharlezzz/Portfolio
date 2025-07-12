@@ -26,7 +26,7 @@ function openNav(){
         main_sec.style.pointerEvents = "none";
         side_bar.style.visibility = "visible";
         side_bar.classList.add('side_bar_act');
-        nav_img.src = "assets/img/exit.png";
+        nav_img.src = "../assets/img/exit.png";
         is_open = true;
     }
     else {
@@ -35,7 +35,7 @@ function openNav(){
         main_sec.style.pointerEvents = "all";
         side_bar.style.visibility = "none";
         side_bar.classList.remove('side_bar_act');
-        nav_img.src = "assets/img/nav.png";
+        nav_img.src = "../assets/img/nav.png";
         is_open = false;
     }
 }
