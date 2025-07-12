@@ -109,23 +109,51 @@
 }
 
 .project_div:nth-child(1){
-    background-image: url(assets/img/projects_rockt.png);
+    background-image: url(../assets/img/projects_lyrically.png);
 }
 
 .project_div:nth-child(2){
-    background-image: url(assets/img/projects_luuseed.png);
+    background-image: url(../assets/img/projects_medicrypt.png);
 }
 
 .project_div:nth-child(3){
-    background-image: url(assets/img/projects_huebet.png);
+    background-image: url(../assets/img/projects_fuzzypc.png);
 }
 
 .project_div:nth-child(4){
-    background-image: url(assets/img/projects_salitrato.png);
+    background-image: url(../assets/img/projects_cafe.png);
 }
 
 .project_div:nth-child(5){
-    background-image: url(assets/img/projects_catwalk.png);
+    background-image: url(../assets/img/projects_cabin626.png);
+}
+
+.project_div:nth-child(6){
+    background-image: url(../assets/img/projects_pupmap.png);
+}
+
+.project_div:nth-child(7){
+    background-image: url(../assets/img/projects_puphymn.png);
+}
+
+.project_div:nth-child(8){
+    background-image: url(../assets/img/projects_rockt.png);
+}
+
+.project_div:nth-child(9){
+    background-image: url(../assets/img/projects_luuseed.png);
+}
+
+.project_div:nth-child(10){
+    background-image: url(../assets/img/projects_huebet.png);
+}
+
+.project_div:nth-child(11){
+    background-image: url(../assets/img/projects_salitrato.png);
+}
+
+.project_div:nth-child(12){
+    background-image: url(../assets/img/projects_catwalk.png);
 }
 
 .project_overlay {
@@ -144,6 +172,7 @@
 .project_div:hover .project_overlay {
     opacity: 100%;
     background-position: 50% 45%;
+    backdrop-filter: blur(3px);
 }
 
 .project_info {

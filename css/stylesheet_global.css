@@ -1,16 +1,16 @@
 @font-face {
     font-family: HeaderMain1;
-    src: url(assets/fonts/HeaderTitle1.otf);
+    src: url(../assets/fonts/HeaderTitle1.otf);
 }
 
 @font-face {
     font-family: GenFont;
-    src: url(assets/fonts/GenFont.ttf);
+    src: url(../assets/fonts/GenFont.ttf);
 }
 
 @font-face {
     font-family: DigiFont;
-    src: url(assets/fonts/DigiFont.TTF);
+    src: url(../assets/fonts/DigiFont.TTF);
 }
 
 body, html {
